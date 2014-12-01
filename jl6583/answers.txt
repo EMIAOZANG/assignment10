@@ -1,0 +1,21 @@
+#Justification of calculations in question 3:
+The overall trend of the grading of a restaurant over time can be calculated by simple linear regression. 
+The first step is converting the grading system to numerical, we did this by assigning A=2,B=1,C=0,
+therefore, technically, we will get a line for each grading sequence, the overall grade is improving if the slope of the line
+is positive and declining if the slope is negative. The grading remains unchanged if the slope is 0.
+However in realization there are very few sequences that regressed to a strictly 0-slope line, to solve the problem,
+we adopted the concept of stationary series in time series processing theory, by running an ADF hypothesis test we can 
+find if a series is overall stationary (which means does not have a general trend that is improving or declining), for series
+that are not stationary we then calculate the linear regression to determine the overall trend
+
+#What other information can you find in this data?
+One of the facts that we could unveil from this data is the general trend of number of inspections over time, 
+we generated a plot showing the frequency of inspections each week over the years, and found that the restaurant inspections
+started to boost after 2010 and after the 4th quarter of 2011 the number of inspections per week fluctuates around 1000 to 1500,
+and this number started to decrease again by the Q3 of 2014
+
+#Is the data useful for assessing the qualities of restaurants?
+Generally speaking this data is useful because it gives you at least an glimpse at the overall grading of the restaurants (e.g. that
+most restaurants had acceptable qualities under the grading system in all of the 5 boroughs), however the data set does not provide
+the information in detailed concerned with the grading system and the coverage of the inspection, which means that data would probably be
+biased and thus not a reliable way to assess the qualities. 
